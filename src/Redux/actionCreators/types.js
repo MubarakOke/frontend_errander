@@ -1,0 +1,12 @@
+export const signinType = "SIGNINTYPE";
+export const signupType = "SIGNUPTYPE";
+export const signoutType = "SIGNOUTTYPE";
+export const showSpinner= "SHOWSPINNER";
+export const hideSpinner= "HIDESPINNER";
+export const errorLogin= "ERRORLOGIN";
+export const errorSignup= "ERRORSIGNUP";
+export const activeOrder= "ACTIVEORDER";
+export const fetchInitiatedOrderType= 'FETCHINITIATEDORDERTYPE';
+export const fetchRunningOrderType= 'FETCHRUNNINGORDERTYPE';
+export const fetchCompletedOrderType= 'FETCHCOMPLETEDORDERTYPE';
+export const updateAuth= "UPDATEAUTH";
