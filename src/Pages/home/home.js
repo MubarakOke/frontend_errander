@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
-import { useSelector } from "react-redux";
 import { AiOutlineCheckCircle, AiOutlineCloseCircle } from "react-icons/ai";
 import Navbar from "../../Components/navbar";
 

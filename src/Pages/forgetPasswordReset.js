@@ -25,7 +25,7 @@ const ForgotPaswordReset = () => {
     formData.append("user", params.user);
     dispatch(showSpinner())
     try{
-      const response= await baseAPI.post(`/account/reset-password/`, formData);
+      await baseAPI.post(`/account/reset-password/`, formData);
       dispatch(hideSpinner())
       toast.success("Password successfully reset")
     }

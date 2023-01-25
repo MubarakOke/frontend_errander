@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../Assets/svg/Logo.svg";
 import baseAPI from "../Api/baseApi"
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 import { showSpinner, hideSpinner } from "../Redux/actionCreators/spinnerAction";
@@ -20,7 +20,7 @@ const ForgotPasword = () => {
     formData.append("email", email);
     dispatch(showSpinner())
     try{
-      const response= await baseAPI.post(`/account/errander/reset-password-request/`, formData);
+      await baseAPI.post(`/account/errander/reset-password-request/`, formData);
       dispatch(hideSpinner())
       toast.success("Password reset link has been sent to your email")
     }

@@ -1,7 +1,6 @@
 import * as type from "./types";
 import baseApi from "../../Api/baseApi";
 import { showSpinner, hideSpinner } from "./spinnerAction";
-import { FetchInitiatedOrderAction, FetchRunningOrderAction, FetchCompletedOrderAction } from "./orderAction";
 
 export const SigninAction = (navigate, formData) => {
   

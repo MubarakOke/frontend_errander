@@ -18,7 +18,6 @@ const Login = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [showError, setShowError] = useState("hidden");
 
   const handleSubmit = (e) => {
     e.preventDefault();

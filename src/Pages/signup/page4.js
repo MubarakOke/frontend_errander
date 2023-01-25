@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { HiArrowNarrowLeft } from "react-icons/hi";
 import { IoIosArrowDown } from "react-icons/io";
-import { RiArrowDownSLine } from "react-icons/ri";
+
 import DisplayError from "../../Components/displayError";
 
 const Page4 = ({ content, setContent, fields, setFields, errors }) => {

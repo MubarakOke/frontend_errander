@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { Route, Routes, Navigate, useNavigate } from "react-router-dom";
+import { Route, Routes, Navigate} from "react-router-dom";
 import { useSelector} from "react-redux";
 
 import Login from "./Pages/login";
@@ -31,7 +31,7 @@ const App = () => {
 
   useEffect(()=>{
     if(erranderID && !webSocketConnected){
-      setWebSocket(new WebSocket(`ws://127.0.0.1:8000/errander/${erranderID}/`));
+      setWebSocket(new WebSocket(`ws://${process.env.REACT_APP_BACKEND_BASE_URL}/ws/errander/${erranderID}/`));
       }
   },[erranderID])
 

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import DisplayError from "../../Components/displayError";
 import Logo from "../../Assets/svg/Logo.svg";
 import Page1 from "./page1";
 import Page2 from "./page2";

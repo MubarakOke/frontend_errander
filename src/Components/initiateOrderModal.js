@@ -11,10 +11,9 @@ import {
 import {MdCall} from "react-icons/md";
 import { AiFillPhone, AiTwotoneShop } from "react-icons/ai";
 import { FaUserAlt } from "react-icons/fa";
-import { ImCancelCircle } from "react-icons/im";
 import { useDispatch } from "react-redux";
 import baseApi from "../Api/baseApi";
-import { FetchInitiatedOrderAction, FetchRunningOrderAction, SetActiveOrder } from "../Redux/actionCreators/orderAction";
+import { FetchInitiatedOrderAction, FetchRunningOrderAction} from "../Redux/actionCreators/orderAction";
 import { showSpinner, hideSpinner } from "../Redux/actionCreators/spinnerAction";
 
 const Modal = ({
@@ -29,7 +28,7 @@ const Modal = ({
   const beginOrder= async ()=>{
     try{
       dispatch(showSpinner())
-      const response = await baseApi.put(`/order/${order.id}/`,
+      await baseApi.put(`/order/${order.id}/`,
                                             {"status": "running"},
                                             {
                                               headers: {
@@ -183,7 +182,7 @@ const Modal = ({
             <button className="bg-[#0E4E48] px-8 py-1 rounded-[13px] text-[white]" onClick={beginOrder}>Begin</button>
           </div>
           <div className="relative"> 
-              <a href={`tel:${order.customer.user.phone}`} target="_blank">
+              <a href={`tel:${order.customer.user.phone}`} target="_blank" rel="noreferrer">
                 <div className="p-4 bg-[#D7EBE2] flex justify-center items-center w-[60px] h-[60px] rounded-full cursor-pointer absolute right-0 bottom-[-11px]">
                   <MdCall className="text-[#0E4E48] text-[40px]" />
                 </div> 
